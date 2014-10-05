@@ -40,6 +40,7 @@ Thumbs.db
 
 # Misc #
 ######################
+themes/**/*/build/
 assets/
 local_config.php
 framework/docs/
