@@ -21,4 +21,3 @@ class CraftAdmin extends ModelAdmin {
 		return $out;
 	}
 }
-?>
