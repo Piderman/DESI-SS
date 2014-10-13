@@ -1,5 +1,5 @@
 <?php
-	class Craft extends DataObJect {
+	class Craft extends DataObject {
 
 		private static $db = array(
 			"Title" => "Varchar",
