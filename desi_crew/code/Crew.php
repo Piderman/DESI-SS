@@ -1,32 +1,33 @@
 <?php
-	class Crew extends DataObject {
 
-		private static $db = array(
-			"FirstName" => "Varchar",
-			"FlightStatus" => "Enum(array('assigned', 'unassigned', 'KIA'))"
-		);
+class Crew extends DataObject {
 
-		function getCMSFields() {
-			$fields = parent::getCMSFields();
+    private static $db = array("FirstName" => "Varchar", "FlightStatus" => "Enum(array('assigned', 'unassigned', 'KIA'))");
 
-			return $fields;
-		}
+    function getCMSFields() {
+        $fields = parent::getCMSFields();
+
+        return $fields;
+    }
 
 
 
-		// last name of a Kerbal is always 'Kerman'
-		function FullName() {
-			return $this->FirstName . " Kerman";
-		}
+    // last name of a Kerbal is always 'Kerman'
+    function FullName() {
+        return $this->FirstName . " Kerman";
+    }
 
-		// assigns the special style class for those worthy ;)
-		function BadassClass() {
-			$cssClass = "";
+    // assigns the special style class for those worthy ;)
+    function BadassClass() {
+        $cssClass = "";
 
-			if ($this->FirstName == "Jeb") {
-				$cssClass = "badass";
-			}
+        // do this because its bawse, var_dump is VERY useful
+        // "what you pass to var_dump is the juicy stuff" - Chis Nankervis
+        // var_dump($this);
+        if ($this->FirstName == "Jeb") {
+            $cssClass = "badass";
+        }
 
-			return $cssClass;
-		}
-	}
+        return $cssClass;
+    }
+}
