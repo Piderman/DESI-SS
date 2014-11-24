@@ -11,6 +11,7 @@
 *.tar
 *.zip
 node_modules/
+vendor/
  
 # Logs and databases #
 ######################
@@ -40,11 +41,11 @@ Thumbs.db
 
 # Misc #
 ######################
-themes/**/*/build/
 assets/
+cms/
+framework/
+themes/**/*/build/
 local_config.php
 framework/docs/
 framework/tests/
 framework/admin/tests/
-
-/vendor/

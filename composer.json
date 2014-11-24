@@ -7,8 +7,10 @@
         }
     ],
     "require": {
-        "composer/installers":    "dev-master",
-        "silverstripe/framework": "3.1.6.*",
-        "silverstripe/cms":       "3.1.6.*"
+        "composer/installers":                      "dev-master",
+        "silverstripe/framework":                   "3.1.6.*",
+        "silverstripe/cms":                         "3.1.6.*",
+        "silverstripe/userforms":                   "dev-master",
+        "ajshort/silverstripe-gridfieldextensions": "dev-master"
     }
 }
