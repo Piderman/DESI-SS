@@ -190,43 +190,5 @@
             "cms",
             "silverstripe"
         ]
-    },
-    {
-        "name": "silverstripe-themes/simple",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-            "reference": "63c549e82fb8d530bb88a370a8b7c3d8c61ddd74"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/63c549e82fb8d530bb88a370a8b7c3d8c61ddd74",
-            "reference": "63c549e82fb8d530bb88a370a8b7c3d8c61ddd74",
-            "shasum": ""
-        },
-        "require": {
-            "composer/installers": "*",
-            "silverstripe/framework": ">=3.0"
-        },
-        "time": "2014-07-30 04:30:14",
-        "type": "silverstripe-theme",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Sara Tušar (Innovaif)",
-                "homepage": "http://www.saratusar.com"
-            }
-        ],
-        "description": "The SilverStripe simple theme (default SilverStripe 3 theme)",
-        "keywords": [
-            "silverstripe",
-            "theme"
-        ]
     }
 ]

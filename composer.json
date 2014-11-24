@@ -1,10 +1,14 @@
 {
-    "name": "matty/desi-ss",
+    "name":    "matty/desi-ss",
     "authors": [
         {
-            "name": "Matty",
+            "name":  "Matty",
             "email": "matt.collins08@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "composer/installers":    "dev-master",
+        "silverstripe/framework": "3.1.6.*",
+        "silverstripe/cms":       "3.1.6.*"
+    }
 }
