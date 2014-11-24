@@ -1,0 +1,16 @@
+{
+    "name":    "matty/desi-ss",
+    "authors": [
+        {
+            "name":  "Matty",
+            "email": "matt.collins08@gmail.com"
+        }
+    ],
+    "require": {
+        "composer/installers":                      "dev-master",
+        "silverstripe/framework":                   "3.1.6.*",
+        "silverstripe/cms":                         "3.1.6.*",
+        "silverstripe/userforms":                   "dev-master",
+        "ajshort/silverstripe-gridfieldextensions": "dev-master"
+    }
+}
