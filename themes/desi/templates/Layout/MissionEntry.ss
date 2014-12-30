@@ -2,7 +2,15 @@
 <div>
 	Mission Type: {$MissionType} <br/>
 	Status: {$Status} <br/>
-	Destination: {$Destination}
+	Destination: {$Destination}<br/>
+	Crew:
+	<ul>
+	<% loop $Crews %>
+		<li>
+			{$FullName}
+		</li>
+	<% end_loop %>
+	</ul>
 </div>
 <div>{$Objective}</div>
 <div>{$Background}</div>

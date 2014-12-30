@@ -16,6 +16,11 @@ class MissionEntry extends Page {
 
     private static $default_parent = "MissionHolder";
 
+    //a mission needs a crew, the same crew member can take part in many missions
+    private static $many_many = array(
+        "Crews" => "Crew"
+    );
+
     private static $db = array(
         "Status" => "Enum(array('In Progress', 'Success', 'Failure', 'Critical Failure'))",
         "MissionType" => "Enum(array('Flyby', 'Orbiter', 'Lander', 'Rover'))",
@@ -75,6 +80,16 @@ class MissionEntry extends Page {
         $fields->addFieldToTab("Root.Main", HtmlEditorField::create("Objective", "Objective"),"Content");
 
         $fields->addFieldToTab("Root.Main", HtmlEditorField::create("Background", "Background"),"Content");
+
+
+        //create new tab for crew, select crew from there
+        $crewMembers = new GridField(
+            'Crews',
+            'Crew',
+            $this->Crews(),
+            GridFieldConfig_RelationEditor::create()
+        );
+        $fields->addFieldToTab('Root.Crew', $crewMembers);
 
         return $fields;
     }
