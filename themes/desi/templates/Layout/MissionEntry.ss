@@ -14,6 +14,6 @@
 </div>
 <div>{$Objective}</div>
 <div>{$Background}</div>
-<div>{$Content}</div>
+<div>{$Details}</div>
 {$Form}
 {$PageComments}
