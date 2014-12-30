@@ -43,11 +43,10 @@ class MissionEntry extends Page {
                 'Pol',
             'Eeloo'
         ))",
-        "Objective" => "HTMLText",
-        "Background" => "HTMLText",
-        "Details" => "HTMLText"
+        "Objective" => "Markdown",
+        "Background" => "Markdown",
+        "Details" => "Markdown"
 
-    //Crew
     //Vehicles
     //Log of events (can gather start time and end time from this?
     );
@@ -76,10 +75,14 @@ class MissionEntry extends Page {
             singleton('MissionEntry')->dbObject('Destination')->enumValues()
         ), 'Content');
 
+        $mdObjective = new MarkdownEditor('Objective', 'Mission Objective');
+        $mdBackground = new MarkdownEditor('Background', 'Mission Background');
+        $mdDetails = new MarkdownEditor('Details', 'Mission Details');
 
-        $fields->addFieldToTab("Root.Main", HtmlEditorField::create("Objective", "Objective"),"Content");
 
-        $fields->addFieldToTab("Root.Main", HtmlEditorField::create("Background", "Background"),"Content");
+        $fields->addFieldToTab("Root.Main", $mdObjective, "Content");
+        $fields->addFieldToTab("Root.Main", $mdBackground, "Content");
+        $fields->addFieldToTab("Root.Main", $mdDetails, "Content");
 
 
         //create new tab for crew, select crew from there
@@ -91,6 +94,8 @@ class MissionEntry extends Page {
         );
         $fields->addFieldToTab('Root.Crew', $crewMembers);
 
+        //dont want to use content, using custom markdown fields of objective, background and details
+        $fields->removeFieldFromTab("Root.Main","Content");
         return $fields;
     }
 }
