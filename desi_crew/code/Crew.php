@@ -3,6 +3,9 @@
 class Crew extends DataObject {
 
     private static $db = array("FirstName" => "Varchar", "FlightStatus" => "Enum(array('assigned', 'unassigned', 'KIA'))");
+    private static $belongs_many_many = array(
+        "Mission" => "MissionEntry"
+    );
 
     function getCMSFields() {
         $fields = parent::getCMSFields();
